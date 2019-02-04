@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>anshul_goyal@outlook.com</contactEmail>
+    <contactPhone>917276281405</contactPhone>
+    <label>Anshul First Heroku App</label>
+    <oauthConfig>
+        <callbackUrl>https://my-first-heroku-app-4jan2015.herokuapp.com/auth/salesforce/callback</callbackUrl>
+        <consumerKey>3MVG9Y6d_Btp4xp5Y5Q_J48WkQq9JjPrhuKeACIhKXvkC0CcmdB27.80JN88ocHG3v0AmiYgAy6m3vz.iXYBS</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

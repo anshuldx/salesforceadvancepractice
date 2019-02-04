@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>anshul_goyal@outlook.com</contactEmail>
+    <label>Demo App for NAB</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com</callbackUrl>
+        <consumerKey>3MVG9Y6d_Btp4xp5Y5Q_J48WkQv2gs2aYjiOJnzDU6zGW1_QBYojqJWq9m28Lnt5NjSbo6el8z7ihaYdn40GQ</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

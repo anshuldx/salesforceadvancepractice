@@ -1,0 +1,22 @@
+<apex:page controller="OpportunityCLS">
+  <apex:pageblock >
+   <apex:pageblockTable value="{!Records}" var="opp">
+   <apex:column value="{!opp.Name}" />
+   <apex:column headervalue="Stage">
+       <div style="background-color:{!If(opp.StageName =='Negotiation/Review','#DEB887',If(opp.StageName =='Closed Won','#7CFC00','#DC143C'))};">
+          {!opp.StageName}
+    </div>
+   </apex:column>
+   <!--<apex:column >
+    <apex:facet name="Header">Stage</apex:facet>
+    <div style="background-color:{!If(opp.StageName =='Negotiation/Review','#7CFC00',If(opp.StageName =='Closed Won','#DEB887','#DC143C'))};">
+{!opp.StageName}
+    </div>
+   </apex:column>  --->
+   <apex:column value="{!opp.Amount}"/>
+   <apex:column value="{!opp.CloseDate}"/>   
+   
+   </apex:pageblockTable>  
+  </apex:pageblock>
+
+</apex:page>

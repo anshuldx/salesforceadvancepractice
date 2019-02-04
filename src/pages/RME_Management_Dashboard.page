@@ -1,0 +1,3 @@
+<apex:page tabstyle="Contact" showheader="false" sidebar="false">
+    <c:Sales_Users_Performance />    
+</apex:page>

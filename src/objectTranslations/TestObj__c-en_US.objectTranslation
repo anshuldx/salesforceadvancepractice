@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Obj</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TestObjs</value>
+    </caseValues>
+    <fields>
+        <label><!-- A2 --></label>
+        <name>A2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- TestObjs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- B2 --></label>
+        <name>B2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Card # --></label>
+        <name>Credit_Card__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiry Date --></label>
+        <name>Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- FormulaField --></label>
+        <name>FormulaField__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- TestObjs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lookup Contact --></label>
+        <name>Lookup_Contact__c</name>
+        <relationshipLabel><!-- TestObjs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>PS247Y1</masterLabel>
+            <translation><!-- PS247Y1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS95Y1</masterLabel>
+            <translation><!-- PS95Y1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Support --></label>
+        <name>Support__c</name>
+        <picklistValues>
+            <masterLabel>Labour</masterLabel>
+            <translation><!-- Labour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Material</masterLabel>
+            <translation><!-- Material --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test2obj --></label>
+        <name>Test2obj__c</name>
+        <relationshipLabel><!-- TestObjs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- tttyyy --></label>
+        <name>tttyyy__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

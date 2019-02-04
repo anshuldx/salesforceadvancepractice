@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>AsyncRequest</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AsyncRequests</value>
+    </caseValues>
+    <fields>
+        <label><!-- AsyncType --></label>
+        <name>AsyncType__c</name>
+        <picklistValues>
+            <masterLabel>AddressVerification</masterLabel>
+            <translation><!-- AddressVerification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amount Update</masterLabel>
+            <translation><!-- Amount Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TranslationPending</masterLabel>
+            <translation><!-- TranslationPending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NewAmount --></label>
+        <name>NewAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- OriginalAmount --></label>
+        <name>OriginalAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Params --></label>
+        <name>Params__c</name>
+    </fields>
+    <fields>
+        <label><!-- TargetOpportunity --></label>
+        <name>TargetOpportunity__c</name>
+        <relationshipLabel><!-- AsyncRequests --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

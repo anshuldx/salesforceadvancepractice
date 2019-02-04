@@ -1,0 +1,5 @@
+<apex:page standardController="lead">
+  <script>
+      alert('hi');
+  </script>
+</apex:page>

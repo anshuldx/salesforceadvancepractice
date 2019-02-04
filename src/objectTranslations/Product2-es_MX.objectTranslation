@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Cost --></label>
+        <name>Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Inventory --></label>
+        <name>Current_Inventory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lifespan Months --></label>
+        <name>Lifespan_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maintenance Cycle (Days) --></label>
+        <name>Maintenance_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Part --></label>
+        <name>Replacement_Part__c</name>
+    </fields>
+    <fields>
+        <label><!-- Warehouse SKU --></label>
+        <name>Warehouse_SKU__c</name>
+    </fields>
+    <layouts>
+        <layout>Product (HowWeRoll) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- HowWeRoll Product Specs --></label>
+            <section>HowWeRoll Product Specs</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

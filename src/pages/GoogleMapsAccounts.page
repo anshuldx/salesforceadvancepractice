@@ -1,0 +1,45 @@
+<apex:page standardController="Account" >
+
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+function initialize() {
+var map;
+var mapOptions = {
+zoom: 13,
+mapTypeId: google.maps.MapTypeId.ROADMAP,
+mapTypeControl: false
+}
+var mapMarker;
+var geocoder = new google.maps.Geocoder();
+
+var address = "{!SUBSTITUTE(JSENCODE(Account.BillingStreet),'\r\n',' ')}, " + 
+"{!Account.BillingCity}, " + "{!Account.BillingPostalCode}, " 
++ "{!Account.BillingCountry}";
+
+geocoder.geocode( {address: address}, function(results, status)
+{
+if (status == google.maps.GeocoderStatus.OK && results.length)
+{
+if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+map = new google.maps.Map(document.getElementById("map"),
+mapOptions);
+map.setCenter(results[0].geometry.location);
+mapMarker = new google.maps.Marker({
+position: results[0].geometry.location,
+map: map,
+title: "{!Account.Name} " + address
+});
+}
+} else
+
+document.getElementById("map").innerHTML = "Unable to find or display a map for
+{!Account.Name}'s billing address : " + address;});
+
+}
+</script>
+<div id="map" style="width:100%;height:350px"></div>
+<script>
+initialize();
+</script>
+</apex:page>

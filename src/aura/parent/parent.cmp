@@ -1,0 +1,8 @@
+<aura:component extensible="true">
+	<h1> title of parent comp</h1>
+	{!v.body}
+	
+
+
+
+</aura:component>

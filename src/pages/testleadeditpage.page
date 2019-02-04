@@ -1,0 +1,137 @@
+<apex:page standardcontroller="Lead">
+<apex:messages />
+	<apex:sectionheader title="{!$ObjectType.Lead.label} Edit" subtitle="{!IF(ISNULL(Lead.Name), 'New Lead',Lead.Name)}"/>
+	<apex:form >
+		<apex:pageblock mode="edit" title="{!$ObjectType.Lead.label} Edit">
+			<apex:pageblockbuttons >
+				<apex:commandbutton value="Save" action="{!Save}"/>
+				<apex:commandbutton value="Cancel" action="{!Cancel}"/>
+			</apex:pageblockbuttons>
+
+			<!-- **********   [Record Type : test1 ]   **********  -->
+			<apex:outputpanel rendered="{!OR(ISNULL(Lead.RecordTypeId),CASESAFEID(Lead.RecordTypeId)='012900000011V7tAAE')}">
+				<apex:pageblocksection title="Lead Information" showheader="true" columns="2">
+					<apex:outputfield value="{!Lead.OwnerId}"/>
+					<apex:inputfield value="{!Lead.Phone}" required="false"/>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="First Name"/>
+						<apex:outputpanel >
+							<apex:inputfield value="{!Lead.Salutation}" required="false"/>
+							<apex:inputfield value="{!Lead.FirstName}" required="false"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:inputfield value="{!Lead.MobilePhone}" required="false"/>
+					<apex:inputfield value="{!Lead.LastName}" required="true"/>
+					<apex:inputfield value="{!Lead.Fax}" required="false"/>
+					<apex:inputfield value="{!Lead.Company}" required="true"/>
+					<apex:inputfield value="{!Lead.Email}" required="false"/>
+					<apex:inputfield value="{!Lead.Title}" required="false"/>
+					<apex:inputfield value="{!Lead.Website}" required="false"/>
+					<apex:inputfield value="{!Lead.LeadSource}" required="false"/>
+					<apex:inputfield value="{!Lead.Status}" required="true"/>
+					<apex:inputfield value="{!Lead.Industry}" required="false"/>
+					<apex:inputfield value="{!Lead.Rating}" required="false"/>
+					<apex:inputfield value="{!Lead.AnnualRevenue}" required="false"/>
+					<apex:inputfield value="{!Lead.NumberOfEmployees}" required="false"/>
+					<apex:inputfield value="{!Lead.Lead_Assigned_Time__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.SourceCode__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.BusinessDivision__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.Report_Group__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.Opportunity_Type__c}" required="false"/>
+					<apex:pageblocksectionitem />
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Address Information" showheader="true" columns="2">
+					<apex:inputfield value="{!Lead.Street}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.City}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.State}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.PostalCode}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.Country}" required="false"/>
+					<apex:pageblocksectionitem />
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Additional Information" showheader="true" columns="2">
+					<apex:inputfield value="{!Lead.ProductInterest__c}" required="false"/>
+					<apex:inputfield value="{!Lead.CurrentGenerators__c}" required="false"/>
+					<apex:inputfield value="{!Lead.SICCode__c}" required="false"/>
+					<apex:inputfield value="{!Lead.Primary__c}" required="false"/>
+					<apex:inputfield value="{!Lead.NumberofLocations__c}" required="false"/>
+					<apex:pageblocksectionitem />
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Description Information" showheader="true" columns="1">
+					<apex:inputfield value="{!Lead.Description}" required="false"/>
+				</apex:pageblocksection>
+			</apex:outputpanel>
+
+			<!-- **********   [Record Type : Master ]   **********  -->
+			<apex:outputpanel rendered="{!CASESAFEID(Lead.RecordTypeId)='012000000000000AAA'}">
+				<apex:pageblocksection title="Lead Information" showheader="true" columns="2">
+					<apex:outputfield value="{!Lead.OwnerId}"/>
+					<apex:inputfield value="{!Lead.Phone}" required="false"/>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="First Name"/>
+						<apex:outputpanel >
+							<apex:inputfield value="{!Lead.Salutation}" required="false"/>
+							<apex:inputfield value="{!Lead.FirstName}" required="false"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:inputfield value="{!Lead.MobilePhone}" required="false"/>
+					<apex:inputfield value="{!Lead.LastName}" required="true"/>
+					<apex:inputfield value="{!Lead.Fax}" required="false"/>
+					<apex:inputfield value="{!Lead.Company}" required="true"/>
+					<apex:inputfield value="{!Lead.Email}" required="false"/>
+					<apex:inputfield value="{!Lead.Title}" required="false"/>
+					<apex:inputfield value="{!Lead.Website}" required="false"/>
+					<apex:inputfield value="{!Lead.LeadSource}" required="false"/>
+					<apex:inputfield value="{!Lead.Status}" required="true"/>
+					<apex:inputfield value="{!Lead.Industry}" required="false"/>
+					<apex:inputfield value="{!Lead.Rating}" required="false"/>
+					<apex:inputfield value="{!Lead.AnnualRevenue}" required="false"/>
+					<apex:inputfield value="{!Lead.NumberOfEmployees}" required="false"/>
+					<apex:inputfield value="{!Lead.Lead_Assigned_Time__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.SourceCode__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.BusinessDivision__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.Report_Group__c}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.Opportunity_Type__c}" required="false"/>
+					<apex:pageblocksectionitem />
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Address Information" showheader="true" columns="2">
+					<apex:inputfield value="{!Lead.Street}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.City}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.State}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.PostalCode}" required="false"/>
+					<apex:pageblocksectionitem />
+					<apex:inputfield value="{!Lead.Country}" required="false"/>
+					<apex:pageblocksectionitem />
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Additional Information" showheader="true" columns="2">
+					<apex:inputfield value="{!Lead.ProductInterest__c}" required="false"/>
+					<apex:inputfield value="{!Lead.CurrentGenerators__c}" required="false"/>
+					<apex:inputfield value="{!Lead.SICCode__c}" required="false"/>
+					<apex:inputfield value="{!Lead.Primary__c}" required="false"/>
+					<apex:inputfield value="{!Lead.NumberofLocations__c}" required="false"/>
+					<apex:pageblocksectionitem />
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Description Information" showheader="true" columns="1">
+					<apex:inputfield value="{!Lead.Description}" required="false"/>
+				</apex:pageblocksection>
+			</apex:outputpanel>
+		</apex:pageblock>
+	</apex:form>
+	<center><br/>
+		<i style="font-size:10px;color:#aaa;">Generated By LAYOUT PAGE <a href="http://www.clerisoft.com" target="_blank">[http://www.clerisoft.com]</a> (2008-2014) : Mon Sep 08 2014 16:02:32 GMT+0530 (India Standard Time)</i>
+	</center><br/>
+</apex:page>

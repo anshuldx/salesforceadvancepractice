@@ -1,0 +1,9 @@
+<aura:component >
+    <lightning:icon size="medium" iconName="action:approval" alternativeText="Approved" />
+    <aura:attribute name="description" type="string"/>
+    <!--<lightning:icon iconName="utility:error" variant="error"/>-->
+
+    
+    &nbsp;<lightning:formattedText value="{!v.description}" />
+
+</aura:component>

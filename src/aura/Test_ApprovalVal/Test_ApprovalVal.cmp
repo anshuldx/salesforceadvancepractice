@@ -1,0 +1,8 @@
+<aura:component implements="force:lightningQuickAction">
+    <!--If you want to customise header then use 
+         'implements ="force:lightningQuickActionWithoutHeader"' -->
+     
+        <div>
+        Hello World!
+    </div>
+</aura:component>

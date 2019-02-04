@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Timesheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Timesheets</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter your Manager here. --></help>
+        <label><!-- Manager --></label>
+        <name>Manager__c</name>
+        <relationshipLabel><!-- Timesheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter the Pay Period End Date here. --></help>
+        <label><!-- Pay Period End --></label>
+        <name>Pay_Period_End__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Pay Period Start Date here. --></help>
+        <label><!-- Pay Period Start --></label>
+        <name>Pay_Period_Start__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current status of the Timesheet.  Set by Approval process. --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation><!-- Recalled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting for Approval</masterLabel>
+            <translation><!-- Waiting for Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Total number of Holiday hours for this Timesheet. --></help>
+        <label><!-- Total HOL Hours --></label>
+        <name>Total_HOL_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of hours for this Timesheet. --></help>
+        <label><!-- Total Hours --></label>
+        <name>Total_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of Other Paid Time Off hours for this Timesheet. --></help>
+        <label><!-- Total Other Pd Time Off Hrs --></label>
+        <name>Total_Other_Pd_Time_Off_Hrs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of Paid Time Off hours for this Timesheet. --></help>
+        <label><!-- Total PTO Hours --></label>
+        <name>Total_PTO_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of Paid Time Off (PTO + Other PTO) hours for this Timesheet. --></help>
+        <label><!-- Total Paid Time Off Hours --></label>
+        <name>Total_Paid_Time_Off_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of worked hours for this Timesheet. --></help>
+        <label><!-- Total Worked Hours --></label>
+        <name>Total_Worked_Hours__c</name>
+    </fields>
+    <layouts>
+        <layout>Timesheet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pay Period Totals --></label>
+            <section>Pay Period Totals</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Pay Period Start must be prior to Pay Period End.  Please enter a date that is before Pay Period End. --></errorMessage>
+        <name>Start_cannot_be_after_End</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,38 @@
+<apex:page cache="true" sidebar="false" docType="html-5.0">
+    
+    
+    <table>
+            <tr>
+                    <td>
+                        <analytics:reportChart reportId="00O90000006DFRD" size="small" cacheResults="true" cacheAge="86" rendered="">
+                        </analytics:reportChart>
+                    </td>
+                    <td>
+                         <analytics:reportChart reportId="00O90000006DFHa" size="small" cacheResults="true" cacheAge="86">
+                         </analytics:reportChart>
+                    </td>
+                    <td>
+                        <analytics:reportChart developername="Test_of_Lead_Status_funnel_Report" size="small" cacheResults="true" cacheAge="86">
+                        </analytics:reportChart>
+                    </td>  
+                     <td>
+                        <analytics:reportChart reportId="00O90000006DIqR" size="small" cacheResults="true" cacheAge="86">
+                        </analytics:reportChart>
+                    </td>
+            </tr>
+            <tr>
+                    <td>
+                       <analytics:reportChart reportId="00O90000006DFRI" size="small" cacheResults="true" cacheAge="86">
+                       </analytics:reportChart>
+                    </td>
+                    <td>
+                         <analytics:reportChart reportId="00O90000006DFVV" size="small" cacheResults="true" cacheAge="86">
+                         </analytics:reportChart>
+                    </td>
+                    <td>
+                        <analytics:reportChart reportId="00O90000006DFVV" size="small" cacheResults="true" cacheAge="86">
+                        </analytics:reportChart>
+                    </td>
+            </tr>
+        </table>
+</apex:page>

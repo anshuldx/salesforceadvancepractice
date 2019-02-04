@@ -1,0 +1,38 @@
+<apex:page standardController="Case">
+    <!--oncomplete="javascript:location.reload()"-->
+    <apex:detail subject="{!case.id}" relatedList="true" title="true" /> 
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    
+        var $j= $.noConflict();
+        
+        $j(document).ready( function (){
+            
+            $j("[name='submit']").hide();
+            if('{!case.Type}'==''){
+                //alert('you can not proceed without the mandatory fields');
+                document.getElementsByName('submit').style.display = 'none';
+                //$j("input[name='submit']").hide();
+                $j("[name='submit']").hide();
+                //$j("[name='submit']").prop("disabled", true);
+                $j("[name=submit]").attr("class",btnDisabled);
+                alert($j('input[name=submit]'));
+                //var submitbutton=document.getElementsByName('submit');
+                //submitbutton.className="btnDisabled ";
+                //submitbutton.disabled=true;
+                //submitbutton.type='hidden';
+            }
+            
+                
+        
+        
+        
+        
+        
+        });
+        
+        
+    </script> 
+</apex:page>

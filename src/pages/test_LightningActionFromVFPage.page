@@ -1,0 +1,33 @@
+<apex:page standardController="Case" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+      <apex:includeLightning />
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <head>
+        <!--<apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system.css')}" />---->
+        <link type="text/css" rel="stylesheet" href="https://www.lightningdesignsystem.com/assets/styles/slds.css"/>
+    </head>
+
+    <body>
+       
+
+        <script>
+        $Lightning.use("c:VFAppContainer", function() {
+            $Lightning.createComponent("c:MyLightningComponent", {}, "myLightningComponent", function(cmp) {
+                var event = $A.get("e.c:VFPageEvent");
+                event.setParams({
+                    "paramA": "Hello, world",
+                    "paramB": "{!Case.Id}"
+                });
+                event.fire();
+            });
+        });
+        </script>
+
+        <div class="slds">
+            <div id="myLightningComponent"></div>
+        </div>
+        
+    </body>
+
+    </html>
+</apex:page>

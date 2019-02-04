@@ -1,0 +1,13 @@
+<aura:component >
+    <!--a:handler event="c:VFPageEvent" action="{!c.handleEvent}" />-->
+    <aura:attribute name="paramA" type="String" />
+    <aura:attribute name="paramB" type="String" />
+
+    <div>
+        Param A: -- <!--<ui:outputText value="{!v.paramA}" />-->
+    </div>
+    <div>
+        <!--<ui:button label="Go to Case" press="{!c.goThere}" />-->
+        Error Messages
+    </div>
+</aura:component>

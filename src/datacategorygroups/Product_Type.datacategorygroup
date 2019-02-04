@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Laptop</label>
+                <name>Laptop</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Desktop</label>
+                <name>Desktop</name>
+            </dataCategory>
+            <label>Consumer</label>
+            <name>Consumer</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Workstation</label>
+                <name>Workstation</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Server</label>
+                <name>Server</name>
+            </dataCategory>
+            <label>Business</label>
+            <name>Business</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product Type</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Current Generator(s) --></label>
+        <name>CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery/Installation Status --></label>
+        <name>DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Main Competitor(s) --></label>
+        <name>MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Type --></label>
+        <name>Opportunity_Type__c</name>
+        <picklistValues>
+            <masterLabel>Appointment</masterLabel>
+            <translation><!-- Appointment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data/List Order</masterLabel>
+            <translation><!-- Data/List Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail Lead Generation</masterLabel>
+            <translation><!-- Direct Mail Lead Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Lead Generation</masterLabel>
+            <translation><!-- Email Lead Generation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Envelope Sale</masterLabel>
+            <translation><!-- Envelope Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Motion</masterLabel>
+            <translation><!-- Local Motion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdoor Advertisement</masterLabel>
+            <translation><!-- Outdoor Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPC/Digital Advertising</masterLabel>
+            <translation><!-- PPC/Digital Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio</masterLabel>
+            <translation><!-- Radio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEO Audit</masterLabel>
+            <translation><!-- SEO Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar</masterLabel>
+            <translation><!-- Seminar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talking Mail Landing Page</masterLabel>
+            <translation><!-- Talking Mail Landing Page --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Television</masterLabel>
+            <translation><!-- Television --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestCounterAmount --></label>
+        <name>TestCounterAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>TrackingNumber__c</name>
+    </fields>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Opp Stage Chart --></label>
+            <section>Opp Stage Chart</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- New Client --></label>
+        <name>New_Client</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Tracknig number must be set for opportunities --></errorMessage>
+        <name>Enforce_Tracking_Number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Test_AJAX --></label>
+        <name>Test_AJAX</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- opp_console_tab --></label>
+        <name>opp_console_tab</name>
+    </webLinks>
+</CustomObjectTranslation>

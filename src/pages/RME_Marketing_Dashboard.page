@@ -1,0 +1,166 @@
+<apex:page tabstyle="Contact" readOnly="true" controller="RME_Marketing_Dash_Controller"> 
+     
+
+
+	<style>
+#paginationButtons {
+	vertical-align: middle;
+	padding-top: 7px;
+	border-top: 1px solid black;
+}
+
+.apexp .bPageBlock .detailList {
+	width: 53%;
+}
+</style>
+	<apex:form >
+		<apex:sectionHeader title="RME Marketing dashboard"
+			subtitle="{!$User.FirstName}  {!$User.LastName}" />
+		<apex:pageBlock >
+			<!---Date: <apex:inputText value="{!datename}" size="10" id="demo" onfocus="DatePicker.pickDate(false, this , false);" /> --->
+			<!--  <apex:pageBlockSection title="Select Timeframe" columns="20">
+				<apex:selectlist value="{!selectedTimeframe}" size="1" label="Range">
+					<apex:selectOptions value="{!timerangelist}"></apex:selectOptions>
+					<apex:actionsupport action="{!showLeadsinTimeFrame}"
+						rerender="leadCounts_Source,sourceChartID,leadCounts_Division,divisionChartID"
+						event="onchange" />
+				</apex:selectlist>
+				<apex:inputText value="{!datename}" size="10" id="fromText"
+					onfocus="DatePicker.pickDate(false, this , false);" label="From" />
+				<apex:inputText value="{!datename}" size="10" id="ToText"
+					onfocus="DatePicker.pickDate(false, this , false);" label="To" />
+			</apex:pageBlockSection>-->
+			<apex:pageBlocksection title="Leads Count by Source"
+				id="leadCounts_Source">
+
+				<apex:outputpanel id="sourceChartID">
+
+					<apex:chart height="250" width="350" data="{!pieDataSource}"
+						resizable="false" background="#F5F5F5">
+
+						<apex:pieSeries dataField="data" labelField="name"
+							highlight="false">
+							<apex:chartLabel display="rotate" />
+							<apex:chartTips height="20" width="120" />
+						</apex:pieSeries>
+						<apex:legend position="left" />
+					</apex:chart>
+
+				</apex:outputpanel>
+				<apex:outputpanel id="divisionChartID">
+					<apex:chart height="250" width="350" data="{!pieDataDivision}">
+
+						<apex:pieSeries dataField="data" labelField="name"
+							highlight="false">
+							<apex:chartLabel display="rotate" />
+							<apex:chartTips height="20" width="120" />
+						</apex:pieSeries>
+						<apex:legend position="left" />
+					</apex:chart>
+				</apex:outputpanel>
+			</apex:pageBlocksection>
+			<apex:pageBlock title="My Leads" id="MyleadsID">
+				<apex:pageBlockTable value="{!myleads}" var="leadobj"
+					id="MyLeadTableID">
+					<apex:column headervalue="Lead Name">
+						<apex:outputlink value="/{!leadobj.id}">
+                      {!leadobj.Name} 
+                      </apex:outputlink>
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">&nbsp;&nbsp;&nbsp;Company</apex:facet>
+						<apex:outputText value="{!leadobj.Company}" />
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">&nbsp;&nbsp;&nbsp;Source</apex:facet>
+						<apex:outputText value="{!leadobj.leadsource}" />
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">&nbsp;&nbsp;&nbsp;Division</apex:facet>
+						<apex:outputText value="{!leadobj.BusinessDivision__c}" />
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">&nbsp;&nbsp;&nbsp;Status</apex:facet>
+						<apex:outputText value="{!leadobj.status}" />
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">&nbsp;&nbsp;&nbsp;CreatedDate</apex:facet>
+						<apex:outputText value="{!leadobj.createdDate}" />
+					</apex:column>
+
+				</apex:pageBlockTable>
+				<apex:outputPanel id="MyLeadPaginationButtons">
+					<apex:outputPanel id="CasePaginationPanel" styleClass="bottomNav">
+						<div id="paginationButtons" align="center">
+							<apex:outputPanel layout="block" styleClass="paginator"
+								id="navPage" style="background-color : white;font-size:12px;">
+								<apex:outputPanel styleClass="left">
+									<b> {!LeadRecordsFrom} - {!LeadRecordsTo} of
+										{!MyLeadtotal_size} </b>
+								</apex:outputPanel>
+								<apex:outputPanel styleClass="prevNextLinks">
+									<apex:outputPanel rendered="{!IF(MyLeadCounter>0,false,true)}">
+										<span class="prevNext"><img src="/s.gif"
+											class="firstoff" /></span>
+										</apex:outputpanel>
+										<apex:outputPanel rendered="{!IF(MyLeadCounter>0,false,true)}">
+											<span class="prevNext"><img src="/s.gif"
+												class="prevoff" />Previous</span>
+											</apex:outputpanel>
+											<apex:outputPanel styleClass="prevNext"
+												rendered="{!NOT(IF(MyLeadCounter>0,false,true))}">
+												<apex:commandLink action="{!Beginning}" title="First"
+													reRender="MyLeadTableID,MyLeadPaginationButtons">
+													<apex:param name="caseParamBegin" value="MyLead"
+														assignto="{!Objectidentifier}" />
+													<img src="/s.gif" title="First" alt="First" class="first" />
+												</apex:commandLink>
+											</apex:outputPanel>
+											<apex:outputPanel styleClass="prevNext"
+												rendered="{!NOT(IF(MyLeadCounter>0,false,true))}">
+												<apex:commandLink action="{!Previous}" title="Previous"
+													reRender="MyLeadTableID,MyLeadPaginationButtons">
+													<apex:param name="caseParamBegin" value="MyLead"
+														assignto="{!Objectidentifier}" />
+													<img src="/s.gif" title="Previous" alt="Previous"
+														class="prev" />Previous 
+                                        </apex:commandLink>
+											</apex:outputPanel>
+											<apex:outputPanel rendered="{!IF( ((MyLeadCounter+ list_size) < MyLeadtotal_size),false,true)}">           
+                                        Next<span class="prevNext"><img
+													src="/s.gif" class="nextoff" /></span>
+												</apex:outputpanel>
+												<apex:outputPanel rendered="{!IF( ((MyLeadCounter+ list_size) < MyLeadtotal_size),false,true)}">
+													<span class="prevNext"><img src="/s.gif"
+														class="lastoff" /></span>
+													</apex:outputpanel>
+													<apex:outputPanel styleClass="prevNext"
+														rendered="{!NOT(IF( ((MyLeadCounter+ list_size) < MyLeadtotal_size),false,true))}">
+														<apex:commandLink title="Next" action="{!Next}"
+															reRender="MyLeadTableID,MyLeadPaginationButtons">
+															<apex:param name="caseParamBegin" value="MyLead"
+																assignto="{!Objectidentifier}" />
+                                            Next<img src="/s.gif"
+																title="Next" alt="Next" class="next" />
+														</apex:commandLink>
+													</apex:outputPanel>
+													<apex:outputPanel styleClass="prevNext"
+														rendered="{!NOT(IF( ((MyLeadCounter+ list_size) < MyLeadtotal_size),false,true))}">
+														<apex:commandLink title="Last" action="{!End}"
+															reRender="MyLeadTableID,MyLeadPaginationButtons">
+															<apex:param name="caseParamBegin" value="MyLead"
+																assignto="{!Objectidentifier}" />
+															<img src="/s.gif" title="Last" alt="Last Page"
+																class="last" />
+														</apex:commandLink>
+													</apex:outputPanel>
+												</apex:outputPanel>
+											</apex:outputPanel>
+						</div>
+					</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:pageBlock>
+
+			</apex:pageblock>
+	</apex:form>
+</apex:page>

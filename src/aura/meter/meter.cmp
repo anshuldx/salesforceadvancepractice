@@ -1,0 +1,21 @@
+<aura:component >
+	
+	<aura:attribute name="value" type="Decimal"/> 
+
+	<div>
+    	<div >
+
+        	<div>
+				<div style="{!'width:'+(v.value*100)+'%'}" /> 	
+
+
+    		</div>
+        </div>
+
+    </div>
+
+
+
+
+
+</aura:component>

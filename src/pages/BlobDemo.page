@@ -1,0 +1,4 @@
+<apex:page language="ja">
+  Hi this is the pdf content<br/>
+  {!$Label.label1}
+</apex:page>

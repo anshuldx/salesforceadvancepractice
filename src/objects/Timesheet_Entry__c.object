@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Entries for Timesheets</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Day__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+MOD( Date__c  - DATE(1900, 1, 7), 7), 
+0, &quot;Sunday&quot;, 
+1, &quot;Monday&quot;, 
+2, &quot;Tuesday&quot;, 
+3, &quot;Wednesday&quot;, 
+4, &quot;Thursday&quot;, 
+5, &quot;Friday&quot;, 
+6, &quot;Saturday&quot;, &quot;Error&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Day</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the end of your day here.</inlineHelpText>
+        <label>End</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>HOL_Hours__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter an holiday hours here.</inlineHelpText>
+        <label>HOL Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Less_Lunch__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the time you took for Lunch here.</inlineHelpText>
+        <label>Less Lunch</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Paid_Time_Off_Hrs__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter any other paid time off hours here that may not apply to your allotted time off.</inlineHelpText>
+        <label>Other Paid Time Off Hrs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PTO_Hours__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter any paid time off hours here.</inlineHelpText>
+        <label>PTO Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paid_Time_Off__c</fullName>
+        <externalId>false</externalId>
+        <formula>PTO_Hours__c  +  HOL_Hours__c  +  Other_Paid_Time_Off_Hrs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total paid time off for this entry.</inlineHelpText>
+        <label>Paid Time Off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the start of your day here.</inlineHelpText>
+        <label>Start</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Timesheet__c</fullName>
+        <externalId>false</externalId>
+        <label>Timesheet</label>
+        <referenceTo>Timesheet__c</referenceTo>
+        <relationshipLabel>Timesheet Entries</relationshipLabel>
+        <relationshipName>Timesheet_Entries</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Total_Hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>Worked_Hours__c  +  Paid_Time_Off__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total hours for this entry.</inlineHelpText>
+        <label>Total Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Worked_Hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>(((ABS(Start__c  -  End__c)  * 1440) / 60) -  Less_Lunch__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total number of hours worked for this entry.</inlineHelpText>
+        <label>Worked Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Timesheet Entry</label>
+    <nameField>
+        <displayFormat>TS Entry-{000000000}</displayFormat>
+        <label>Timesheet Entry #</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Timesheet Entries</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Timesheet__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Date__c</searchFilterFields>
+        <searchFilterFields>Timesheet__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>End_within_Timesheet_Pay_Period</fullName>
+        <active>true</active>
+        <description>Timesheet Entry End must be less than or equal to Timesheet Pay Period End.</description>
+        <errorConditionFormula>IF ( and ( DATEVALUE(End__c)  &lt;&gt; null,  Timesheet__r.Pay_Period_End__c  &lt;&gt;  null, DATEVALUE(End__c) &gt; Timesheet__r.Pay_Period_End__c ) , true, false)</errorConditionFormula>
+        <errorDisplayField>End__c</errorDisplayField>
+        <errorMessage>The End must be less than or equal to the Timesheet Pay Period End.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_cannot_be_after_the_End</fullName>
+        <active>true</active>
+        <description>Start must be before the End.</description>
+        <errorConditionFormula>Start__c  &gt; End__c</errorConditionFormula>
+        <errorDisplayField>Start__c</errorDisplayField>
+        <errorMessage>The Start cannot be after the End.  Please enter a date and time prior to the End date and time.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_within_Timesheet_Pay_Period</fullName>
+        <active>true</active>
+        <description>Timesheet Entry Start must be greater or equal than Timesheet Pay Period Start.</description>
+        <errorConditionFormula>(NOT(ISNULL( DATEVALUE(Start__c) )) &amp;&amp; NOT(ISNULL( Timesheet__r.Pay_Period_Start__c  )) &amp;&amp; DATEVALUE(Start__c)&lt; Timesheet__r.Pay_Period_Start__c )</errorConditionFormula>
+        <errorDisplayField>Start__c</errorDisplayField>
+        <errorMessage>The Start must be greater than or equal to the Timesheet Pay Period Start.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,5 @@
+<apex:page >
+     <apex:form >
+       <apex:outputpanel >Right Section</apex:outputpanel>
+     </apex:form>
+</apex:page>

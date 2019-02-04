@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="searchString" type="String" default="Anshul"/>
+    
+    <lightning:layout>
+        <lightning:layoutItem>
+        	
+                <lightning:formattedText value="header" />
+           
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

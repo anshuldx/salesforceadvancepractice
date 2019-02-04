@@ -1,0 +1,3 @@
+<apex:component >
+  <analytics:reportChart reportId="00O90000006DFVV" size="small" cacheResults="true" cacheAge="86"></analytics:reportChart>
+</apex:component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Penalty Notice</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Penalty Notices</value>
+    </caseValues>
+    <fields>
+        <label><!-- Compliance --></label>
+        <name>Compliance__c</name>
+        <relationshipLabel><!-- Penalty Notices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Notice Number --></label>
+        <name>Notice_Number__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

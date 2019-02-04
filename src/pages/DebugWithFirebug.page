@@ -1,0 +1,19 @@
+<apex:page >
+<script src="/soap/ajax/19.0/connection.js" type="text/javascript" />
+
+<script type = "text/javascript">
+function tryConsole() {
+console.log("Link clicked");
+sforce.connection.sessionId = '{!$Api.Session_ID}';
+var result = sforce.connection.query("Select id, name " +
+" from Account limit 1");
+
+var it = new sforce.QueryResultIterator(result);
+while(it.hasNext()) {
+var record = it.next();
+console.log(record);
+}
+}
+</script>
+<a href="javascript:tryConsole()">click here</a>
+</apex:page>

@@ -1,0 +1,24 @@
+<apex:page cache="true" sidebar="false" docType="html-5.0">
+<apex:outputPanel layout="block" style="float:left;">
+    <analytics:reportChart developername="Test_of_Lead_Status_funnel_Report" size="small" cacheResults="true" cacheAge="86">
+    </analytics:reportChart>
+</apex:outputPanel>
+
+<apex:outputPanel layout="block" style="float:right;">
+    <analytics:reportChart reportId="00O90000006DFHa" size="small" cacheResults="true" cacheAge="86">
+    </analytics:reportChart>
+</apex:outputPanel>
+<apex:outputPanel layout="block" style="float:left;">
+    <analytics:reportChart reportId="00O90000006DFMR" size="small" cacheResults="true" cacheAge="86">
+    </analytics:reportChart>
+</apex:outputPanel>
+<apex:outputPanel layout="block" style="float:right;">
+    <analytics:reportChart reportId="00O90000006DFRI" size="small" cacheResults="true" cacheAge="86">
+    </analytics:reportChart>
+</apex:outputPanel>
+
+<!--<analytics:reportChart reportId="00O90000006DFVV" size="small" cacheResults="true" cacheAge="86">
+</analytics:reportChart>--->
+<c:SP_Wise_Analysis ></c:SP_Wise_Analysis>
+
+</apex:page>

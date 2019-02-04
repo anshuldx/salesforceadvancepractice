@@ -1,0 +1,18 @@
+<apex:page standardController="Case">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+ 
+    <script>
+        $Lightning.use("c:VFAppContainer", function() {
+            $Lightning.createComponent(
+                "c:MyLightningComponent",
+                {},
+                "theCase",
+                function(cmp) {
+                    console.log("Component created!");
+                    console.log(cmp);
+                });
+            });
+    </script>
+    
+    <div id="theCase"></div>
+</apex:page>

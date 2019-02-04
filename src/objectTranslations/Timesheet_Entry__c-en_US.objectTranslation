@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Timesheet Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Timesheet Entries</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day --></label>
+        <name>Day__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the end of your day here. --></help>
+        <label><!-- End --></label>
+        <name>End__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter an holiday hours here. --></help>
+        <label><!-- HOL Hours --></label>
+        <name>HOL_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the time you took for Lunch here. --></help>
+        <label><!-- Less Lunch --></label>
+        <name>Less_Lunch__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter any other paid time off hours here that may not apply to your allotted time off. --></help>
+        <label><!-- Other Paid Time Off Hrs --></label>
+        <name>Other_Paid_Time_Off_Hrs__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter any paid time off hours here. --></help>
+        <label><!-- PTO Hours --></label>
+        <name>PTO_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total paid time off for this entry. --></help>
+        <label><!-- Paid Time Off --></label>
+        <name>Paid_Time_Off__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the start of your day here. --></help>
+        <label><!-- Start --></label>
+        <name>Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timesheet --></label>
+        <name>Timesheet__c</name>
+        <relationshipLabel><!-- Timesheet Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Total hours for this entry. --></help>
+        <label><!-- Total Hours --></label>
+        <name>Total_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of hours worked for this entry. --></help>
+        <label><!-- Worked Hours --></label>
+        <name>Worked_Hours__c</name>
+    </fields>
+    <layouts>
+        <layout>Timesheet Entry Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The End must be less than or equal to the Timesheet Pay Period End. --></errorMessage>
+        <name>End_within_Timesheet_Pay_Period</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Start cannot be after the End.  Please enter a date and time prior to the End date and time. --></errorMessage>
+        <name>Start_cannot_be_after_the_End</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Start must be greater than or equal to the Timesheet Pay Period Start. --></errorMessage>
+        <name>Start_within_Timesheet_Pay_Period</name>
+    </validationRules>
+</CustomObjectTranslation>

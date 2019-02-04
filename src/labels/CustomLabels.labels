@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>label1</fullName>
+        <categories>multilingual translation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>label1</shortDescription>
+        <value>good</value>
+    </labels>
+    <labels>
+        <fullName>testLabelforlightning</fullName>
+        <categories>Lightning</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>testLabelforlightning</shortDescription>
+        <value>Hello!</value>
+    </labels>
+    <labels>
+        <fullName>test_label</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>test label</shortDescription>
+        <value>Ok</value>
+    </labels>
+    <labels>
+        <fullName>updatePicklistMetadataDuration</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>updatePicklistMetadataDuration</shortDescription>
+        <value>10</value>
+    </labels>
+</CustomLabels>

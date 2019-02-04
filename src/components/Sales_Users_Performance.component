@@ -1,0 +1,39 @@
+<apex:component controller="Sales_Users_Performance_Controller">
+    
+    <apex:form >
+        <apex:sectionHeader title="RME Management dashboard" subtitle="{!$User.FirstName}  {!$User.LastName}" />
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Select Timeframe">
+                 <apex:selectlist value="{!selectedTimeframe}" size="1">
+                     <apex:selectOptions value="{!timerangelist}"></apex:selectOptions>
+                     <apex:actionsupport action="{!showLeadsinTimeFrame}" rerender="leadCounts_Source,sourceChartID,leadCounts_Division,divisionChartID" event="onchange"/>
+                 </apex:selectlist>
+                 
+             </apex:pageBlockSection>
+             <apex:pageBlocksection title="Performance of Sales users" id="Counts_Users">
+                 <apex:pageblockTable value="{!wrapCountsWithUserList}" var="a" id="userperTable" >
+                    <apex:column >
+                            <apex:facet name="header">Sales User</apex:facet>
+                            <apex:outputText value="{!a['name']}"/>
+                    </apex:column>                
+                    <apex:column >
+                            <apex:facet name="header">&nbsp;&nbsp;&nbsp;Leads</apex:facet>
+                            <apex:outputText value="{!a['leadCount']}"/>
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">&nbsp;&nbsp;&nbsp;Accounts</apex:facet>
+                            <apex:outputText value="{!a['accountCount']}"/>
+                    </apex:column>
+                     <apex:column >
+                            <apex:facet name="header">&nbsp;&nbsp;&nbsp;Contacts</apex:facet>
+                            <apex:outputText value="{!a['conCount']}"/>
+                    </apex:column>
+                     <apex:column >
+                            <apex:facet name="header">&nbsp;&nbsp;&nbsp;Opportunities</apex:facet>
+                            <apex:outputText value="{!a['oppCount']}"/>
+                    </apex:column>
+                </apex:pageblockTable>
+             </apex:pageBlocksection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:component>
