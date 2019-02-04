@@ -5,7 +5,6 @@ public abstract class AbstractClassBase {
       return 'Confirmed';
   
   }
-    //comments1
   private virtual boolean returnFlag(){
       return true;
   
