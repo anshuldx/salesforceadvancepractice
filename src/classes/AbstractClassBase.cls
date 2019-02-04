@@ -5,7 +5,7 @@ public abstract class AbstractClassBase {
       return 'Confirmed';
   
   }
-    //wrong comments
+  //no comments
   private virtual boolean returnFlag(){
       return true;
   
